@@ -1,6 +1,6 @@
 ## Locking rows issue
 
-https://github.com/rails/rails/issues/44114
+see https://github.com/rsim/oracle-enhanced/issues/2237
 
 ```
 rails c
