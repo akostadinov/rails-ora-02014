@@ -18,5 +18,12 @@ module RailsOra02014
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    ActiveSupport.on_load(:active_record) do
+      ActiveRecord::ConnectionAdapters::OracleEnhancedAdapter.class_eval do
+        # Use old visitor for Oracle 12c database
+        # self.use_old_oracle_visitor = true
+      end
+    end
   end
 end
